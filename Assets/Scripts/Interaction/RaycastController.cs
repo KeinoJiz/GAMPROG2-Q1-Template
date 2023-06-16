@@ -31,12 +31,11 @@ public class RaycastController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Usable") || hit.collider.CompareTag("Equippable"))
             {
-                interactionInfo.GetComponent<TextMeshProUGUI>().text = hit.collider.gameObject.name;
-
+                interactionInfo.GetComponent<TextMeshProUGUI>().text = hit.collider.GetComponent<Item>().id;
+                
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    //itemScript = itemScript.Interact();
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.gameObject.GetComponent<Item>().Interact();
                 }
             }
             else

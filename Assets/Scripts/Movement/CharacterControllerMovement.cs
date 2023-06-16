@@ -27,7 +27,6 @@ public class CharacterControllerMovement : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
-        Debug.Log(rb);
         groundCheck = GetComponentInChildren<RaycastController>();
         
     }

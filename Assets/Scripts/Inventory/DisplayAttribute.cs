@@ -14,8 +14,6 @@ public class DisplayAttribute : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(InventoryManager.Instance);
-
        text.text = ($"{typeToDisplay.ToString()} : {InventoryManager.Instance.player.GetAttributeValue(typeToDisplay)}");
     }
 }

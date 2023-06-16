@@ -17,6 +17,7 @@ public enum ItemType
 {
     Consumable,
     Equipabble, 
+    Key,
 }
 
 public enum EquipmentSlotType
@@ -27,7 +28,6 @@ public enum EquipmentSlotType
     Shield,
     Boots,
     Helmet,
-    // Define other equipment slots here
 }
 
 [System.Serializable]
@@ -49,4 +49,5 @@ public enum AttributeType
     Strength,
     Agility,
     Defense,
+    MP,
 }

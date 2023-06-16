@@ -5,11 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float maxHP;
+    public float maxMP;
+    public float Strength;
+    public float Agility;
+    public float Defense;
+
     public List<Attribute> attributes;
 
     private void Start()
     {
-        Debug.Log(attributes.Count);
+
     }
 
     public void RemoveAttributes(List<Attribute> removedAttributes)

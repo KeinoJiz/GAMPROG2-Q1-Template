@@ -2282,13 +2282,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1362624899}
   itemDatabase:
-  - id: HP Potion
+  - id: Health Potion
     icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
     type: 0
-    slotType: 0
+    slotType: 2
     attributes:
     - type: 0
-      value: 20
+      value: 40
+    prefab: {fileID: 1642404041}
+  - id: Mana Potion
+    icon: {fileID: 21300000, guid: 6592b916f86b19e428db6f6847c7b6dd, type: 3}
+    type: 0
+    slotType: 2
+    attributes:
+    - type: 4
+      value: 50
+    prefab: {fileID: 801370569}
+  - id: Sword
+    icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+    type: 1
+    slotType: 1
+    attributes:
+    - type: 1
+      value: 10
+    prefab: {fileID: 532339465}
+  - id: Bow
+    icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
+    type: 1
+    slotType: 1
+    attributes:
+    - type: 2
+      value: 13
+    - type: 1
+      value: 7
+    prefab: {fileID: 1740722325}
+  - id: Shield
+    icon: {fileID: 21300000, guid: b97c91e8b348f3f4ebdc11f5c82182cd, type: 3}
+    type: 1
+    slotType: 3
+    attributes:
+    - type: 3
+      value: 10
+    prefab: {fileID: 676263279}
+  - id: Key
+    icon: {fileID: 21300000, guid: db427fab3e94daf4caa704d9314a77a1, type: 3}
+    type: 2
+    slotType: 2
+    attributes: []
     prefab: {fileID: 0}
   inventorySlots:
   - {fileID: 2580618980867222340}
@@ -3291,6 +3331,7 @@ GameObject:
   - component: {fileID: 1166656979}
   - component: {fileID: 1166656981}
   - component: {fileID: 1166656980}
+  - component: {fileID: 1166656982}
   m_Layer: 5
   m_Name: Mana Bar
   m_TagString: Untagged
@@ -3358,6 +3399,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166656978}
   m_CullTransparentMesh: 1
+--- !u!114 &1166656982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166656978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2356bd376fe80854a994f797f69d4349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1074469525}
+  fill: {fileID: 1377627134}
 --- !u!1001 &1239377892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3932,9 +3987,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  maxMP: 80
+  Strength: 1
+  Agility: 1
+  Defense: 1
   attributes:
   - type: 0
     value: 5
+  - type: 4
+    value: 2
 --- !u!1 &1377627132
 GameObject:
   m_ObjectHideFlags: 0
@@ -4586,6 +4647,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 176636, guid: b4ea2f3e0e40943219a8997915f71646, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176636, guid: b4ea2f3e0e40943219a8997915f71646, type: 3}
       propertyPath: m_TagString
       value: Equippable
       objectReference: {fileID: 0}
@@ -4696,7 +4761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9180bf81e994684d967719ffb5ee47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: HP Potion
+  id: Health Potion
 --- !u!1001 &1669155351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4884,7 +4949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6867755127861471452, guid: 1fcefbb16b6e90548859e78d748717cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fcefbb16b6e90548859e78d748717cc, type: 3}
@@ -4996,6 +5061,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8243998, y: 0.23502229, z: 6.581685}
   m_Center: {x: 0.01827201, y: -0.0000009536743, z: -9.861026e-11}
+--- !u!114 &1740722331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740722325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9180bf81e994684d967719ffb5ee47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Bow
 --- !u!1 &1764844274
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,6 +6674,10 @@ PrefabInstance:
     - target: {fileID: 8958272074740555556, guid: 40cb74be0451cdf419efb4e95c221bf5, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958272074740555556, guid: 40cb74be0451cdf419efb4e95c221bf5, type: 3}
+      propertyPath: m_TagString
+      value: Usable
       objectReference: {fileID: 0}
     - target: {fileID: 8958272074740555563, guid: 40cb74be0451cdf419efb4e95c221bf5, type: 3}
       propertyPath: m_RootOrder
