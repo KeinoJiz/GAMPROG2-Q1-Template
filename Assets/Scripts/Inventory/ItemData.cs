@@ -10,6 +10,7 @@ public class ItemData
     public ItemType type;
     public EquipmentSlotType slotType;
     public List<Attribute> attributes;
+    public GameObject prefab;
 }
 
 public enum ItemType
@@ -21,7 +22,11 @@ public enum ItemType
 public enum EquipmentSlotType
 {
     None,
-    // TODO
+    Weapon,
+    Item,
+    Shield,
+    Boots,
+    Helmet,
     // Define other equipment slots here
 }
 
@@ -41,6 +46,7 @@ public class Attribute
 public enum AttributeType
 {
     HP,
-    // TODO
-    // Add other attribute types here
+    Strength,
+    Agility,
+    Defense,
 }

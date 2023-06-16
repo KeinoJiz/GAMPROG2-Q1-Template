@@ -5,6 +5,8 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public Player player;
+
+    [SerializeField]
     //For now, this will store information of the Items that can be added to the inventory
     public List<ItemData> itemDatabase;
 
@@ -16,7 +18,8 @@ public class InventoryManager : MonoBehaviour
 
     //Singleton implementation. Do not change anything within this region.
     #region SingletonImplementation
-    private static InventoryManager instance = null;
+    private static InventoryManager instance = null
+        ;
     public static InventoryManager Instance
     {
         get
